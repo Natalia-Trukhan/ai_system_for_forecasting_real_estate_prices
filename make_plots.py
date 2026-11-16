@@ -18,7 +18,7 @@ def make_plots(model_choice_widget):
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
     # Графік 1: Порівняння прогнозованих і фактичних цін
-    axes[0].scatter(y_test[:300], y_pred[:300], alpha=0.6, color="blue", edgecolors="k")
+    axes[0].scatter(y_test[:500], y_pred[:500], alpha=0.6, color="blue", edgecolors="k")
     axes[0].plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--', lw=2)
     axes[0].set_title(f"{title_prefix}: Фактичні vs Прогнозовані ціни")
     axes[0].set_xlabel("Фактична ціна ($100k)")

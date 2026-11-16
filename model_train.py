@@ -8,6 +8,7 @@ from sklearn.tree import DecisionTreeRegressor
 print("Завантажуємо набір даних...")
 housing = fetch_california_housing(as_frame=True)
 df = housing.frame
+print(df.describe())
 
 print("Перевіряємо та обробляємо пропущені значення...")
 df = df.fillna(df.mean())

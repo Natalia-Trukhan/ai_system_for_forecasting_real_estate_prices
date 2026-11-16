@@ -10,17 +10,17 @@ def init_sqlite():
     cursor.execute("""
             CREATE TABLE IF NOT EXISTS history (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                timestamp TEXT,
-                model_name TEXT,
-                med_inc REAL,
-                house_age REAL,
-                ave_rooms REAL,
-                ave_bedrms REAL,
-                population REAL,
-                ave_occup REAL,
-                latitude REAL,
-                longitude REAL,
-                predicted_price REAL
+                timestamp TEXT NOT NULL,
+                model_name TEXT NOT NULL,
+                med_inc REAL NOT NULL,
+                house_age REAL NOT NULL,
+                ave_rooms REAL NOT NULL,
+                ave_bedrms REAL NOT NULL,
+                population REAL NOT NULL,
+                ave_occup REAL NOT NULL,
+                latitude REAL NOT NULL,
+                longitude REAL NOT NULL,
+                predicted_price REAL NOT NULL
             )
         """)
     conn.commit()
